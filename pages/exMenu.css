@@ -1,0 +1,184 @@
+/* Header */
+.header
+{
+    width: 1000px;
+    height: 100px;
+    border: 2px solid red;
+    margin: 10px auto;
+    box-shadow: 5px 2px 20px #666666;
+}
+
+.icon a img
+{
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+    float: left;
+    box-shadow: 5px 2px 20px #fd0303;
+}
+
+.line
+{
+    border-left: 6px solid green;
+    height: 100px;
+    float: left;
+}
+/* <--Finish header */
+
+
+/* CSS Main Menu */
+.navmenu{width:100%;background: rgb(33, 160, 22);display:inline-block}
+#menu{background-color: rgb(33, 160, 22);color:#fff;font-size:18px;position:relative;top:5px;font-weight:500;cursor:pointer;padding-left:10px;line-height:2.2em}
+#menu a{text-decoration:none}
+nav{display:none}
+nav ul{list-style-type:none;padding-left:0;font-size:0;background-color:rgb(20, 131, 10)}
+nav li{display:block;font-size:16px;color:white}
+ul.navbar>li>a{color:#fff}
+ul.navbar>li>a:hover{color:red}
+nav a{display:block;padding:10px;text-decoration:none;color:inherit}
+/*==Dropdown Menu==*/
+.sub-menu li{list-style-type:none;display:inline-block}
+ul.navbar li ul.sub-menu{display:none;position:absolute}
+ul.navbar li{position:relative}
+ul.navbar li:hover ul.sub-menu{display:block}
+.sub-menu li{margin-left:0!important}
+ul.sub-menu>li>a{color:#fff}
+ul.sub-menu>li>a:hover{color:red}
+@media screen and (max-width:720px){nav ul{width:100%!important}#sub-menu{display:none} nav a{padding:5px 10px}
+}
+@media screen and (min-width:720px){#menu{display:none}nav{display:block!important}nav li{display:inline-block}}
+/*----- Search -----*/
+#search-form{display:inline-block;padding-top:4px;padding-right:5px;float:right}
+#search-form input{width:200px;height:30px;padding:0 8px;float:left;border-radius:2px 0 0 2px;font-size:13px;margin:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:0;font-size:100%;font:inherit}
+#button-submit{width:auto!important;height:30px;padding:0 8px;float:right;border-radius:0 2px 2px 0;background:#66a992;font-size:13px;font-weight:600;text-shadow:0 1px 0 rgba(0,0,0,0.3);color:#fff}
+@media screen and (max-width:480px){.toggle-nav{padding:6px 10px}#search-form input{width:150px}}
+/* <----Finish menu */
+
+/* Login */
+/* Bordered form */
+#login
+{
+    width: 300px;
+    text-align: center;
+    margin: 2px;
+    padding: 2px 5px;
+    border: 2px solid purple;
+}
+
+#login .element
+{
+    text-align: justify;
+    
+}
+
+#login .element input
+{
+   display: left;
+}
+
+#login input[type='submit']
+{
+    width: 100%; 
+    text-align: center; 
+    line-height: 20px; 
+    background-color: rgb(26, 22, 97); 
+    color: white;
+    float: right;
+    margin: 3px 0px;
+}
+
+#login input[type='submit']:hover
+{
+    background-color: rgb(12, 59, 18); 
+}
+  /* <--Finish login */
+
+  /* Các chủ đề sức khỏe */
+  .vertical-menu {
+    border-left: 2px solid rgb(64, 6, 75);
+    width: 200px;
+    height: 175px;
+    overflow-y: auto;
+    float: right;
+  }
+  
+  .vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  /* <-- Finish các chủ đề sức khỏe */
+
+  /* Chức năng */
+  #chucnang
+  {
+    border-bottom: 2px solid #666666;
+    height: 175px;
+    text-align: center;
+    line-height: 175px;
+  }
+
+  #chucnang .element
+  {
+      height: 150px;
+      width: 150px;
+      /*border: 2px solid #66a992;*/
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: 150px 150px;
+      color: rgb(221, 151, 178);
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      line-height: 150px;
+      text-align: center;
+      
+  }
+
+  #chucnang .element:hover
+  {
+    box-shadow: 2px 2px 2px green;
+  }
+
+  /* <-- Finish chức năng */
+
+  /* Content chính */
+  .main-content
+  {
+    margin-top: 30px;
+  }
+
+  .box-content
+  {
+
+  }
+
+  .box-content ul li
+  {
+
+  }
+
+  .box-content p
+  {
+      text-align: justify;
+      height: 110px;
+      overflow-y: hidden;
+      margin: 2px;
+  }
+
+  .box-content h4
+  {
+      margin: 0px 2px;
+  }
+  /* <-- Finish các content chính */

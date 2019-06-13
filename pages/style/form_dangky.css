@@ -1,0 +1,93 @@
+.batbuoc
+{
+    color: red;
+}
+
+.boxDangKy
+{
+    margin: 10px 10px;
+    border-bottom: 1px dashed black;
+    padding-bottom: 15px;
+}
+
+.boxDangKy input[type='text'], .boxDangKy input[type='password'], .boxDangKy select
+{
+    margin-left: 30px;
+    width: 200px;
+}
+
+.boxDangKy input[type='checkbox']
+{
+    margin-left: 50px;
+}
+
+.boxDangKy label:first-child
+{
+    width: 150px;
+}
+
+
+
+.content form label
+{
+    float: left;
+}
+
+#qd_content
+{
+    max-height: 150px;
+    overflow-y: scroll;
+    /* width: 500px; */
+    margin: 10px 15px;
+    border: 1px solid black;
+    text-align: justify;
+    padding: 5px;
+}
+
+#qd_content ol
+{
+    list-style-position: inside;
+    padding: 0px 3px;
+}
+
+
+#qd_content ul
+{
+    list-style-position: inside;
+    list-style-type: disc;
+}
+
+#qd_content li
+{
+    margin-left: 5px;
+}
+
+#quyDinh
+{
+    text-align: center;
+}
+
+#button_DangKy
+{
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin: 5px 20px;
+    float: right;
+    background-color: azure;
+
+    box-shadow: 1px 2px 1px darkolivegreen;
+}
+
+#button_DangKy:hover
+{
+    box-shadow: 1px 2px 1px rgb(153, 22, 103);
+    color: white;
+    background-color: brown;
+}
+
+#bacSi
+{
+    display: none;
+}

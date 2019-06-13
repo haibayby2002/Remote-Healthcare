@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tìm bác sĩ</title>
+    <link rel="stylesheet" href="exMenu.css">
+    <link rel="stylesheet" href="exTimBacSi.css">
+    <script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $('#khoa').change(function()
+            {
+                if($('#khoa').val() == 1)
+                {
+                    $('.dsBacSi').html("");
+                }
+                else if($('#khoa').val() == 2)
+                {
+                    $('.dsBacSi').html('Hiển thị danh sách các bác sĩ thuộc khoa mắt theo thứ tự ca khám từ xa và đánh giá');
+                }
+                else if($('#khoa').val() == 3)
+                {
+                    $('.dsBacSi').html('Hiển thị danh sách các bác sĩ thuộc khoa da liễu theo thứ tự ca khám từ xa và đánh giá');
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <!-- Phần trên bắt đầu giới thiệu -->
+    <div class="header">
+        <div class="icon">
+            <a href="index.html">
+                <img src="image/menu/icon.jpg" alt="Remote Healthcare" />
+            </a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="slogan">
+
+        </div>
+    </div>
+    <!-- Menu -->
+    <div class='content-wrapper'>
+        <div class='navmenu'>
+            <form action='/search' autocomplete='off' id='search-form' method='get'>
+                <input name='q' placeholder='Tìm kiếm' size='15' type='text'/>
+                <input id='button-submit' type='submit' value='Search'/>
+            </form>
+
+          <span id='menu'><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpi/P//PwM1AQsQU9VEJgYqg8FvICgMGUeel0eTzWiyGU02Qz/ZAAQYAOPcBjEdYroKAAAAAElFTkSuQmCC'  /></span>
+          <nav id='navbar' itemprop='mainEntity' itemscope='itemscope' itemtype='https://schema.org/SiteNavigationElement'>
+          <ul class='navbar'>
+              <li><a href='/' itemprop='url'><span itemprop='name'>Trang chủ</span></a></li>
+              <li><a href='/' itemprop='url'><span itemprop='name'>Chủ đề &amp; Sức khỏe</span></a></li>
+              <li id='sub-menu' style="width: 200px; text-align: center"><span itemprop='name'>Khoa</span>
+                    <ul class="sub-menu">
+                        <li><a href='/' itemprop='url'><span itemprop='name'>Khoa mắt</span></a></li>
+                        <li><a href='/' itemprop='url'><span itemprop='name'>Khoa sản</span></a></li>
+                        <li><a href='/' itemprop='url'><span itemprop='name'>Chấn thương chỉnh hình</span></a></li>
+                    </ul>
+              </li>
+              
+                <li><a href='/' itemprop='url'><span itemprop='name'>Bệnh viện</span></a></li>
+                <li><a href='/' itemprop='url'><span itemprop='name'>Bác sĩ</span></a></li>
+            </ul>
+      </nav>
+      </div>
+      </div>
+    </div>
+
+    <div style='clear: both;'></div>
+
+    <!-- Đăng nhập -->
+    <div id='login' style="float: left;">
+        <form action="process/dangNhap.php" method="POST" title="Đăng nhập">
+            <h2>Đăng nhập</h2>
+            <div class='element'>
+                <label for="username">Tên đăng nhập: </label>
+                <input type="text" name="username" id="username" style="float: right; margin-bottom: 4px;">
+                <div style='clear: both;'></div>
+            </div>
+            <div class='element'>
+                <label for="password">Mật khẩu: </label>
+                <input type="password" name="password" id="password" style="float: right; margin-bottom: 4px;">
+                <div style='clear: both;'></div>
+            </div>
+            <div class='element'>
+                <input type="submit" value="Đăng nhập">
+                <div style='clear: both;'></div>
+            </div>
+            <div class='element'>
+                <span><a href="#">Quên mật khẩu</a></span>
+                <span style="float: right;"><a href="dangky.html" target="_blank">Đăng ký</a></span>
+                <div style='clear: both;'></div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Chủ đề bên phải -->
+    <div class="vertical-menu">
+        <a href="#">Thể dục</a>
+        <a href="#">Ăn uống</a>
+        <a href="#">Sinh hoạt</a>
+        <a href="#">Lối sống</a>
+        <a href="#">Thực phẩm tốt</a>
+        <a href="#">Sống khỏe</a>
+    </div>
+
+    <!-- Các chức năng khám -->
+    <div id='chucnang'>
+        &nbsp;
+        <a href='#'><div id='napTien' class='element' style="background-image: url('image/function/HAND_MONEY-512.png')">Nạp tiền</div></a>
+        <a href='#'><div id='khamTuXa' class='element' style="background-image: url('image/function/icon.jpg');">Khám từ xa</div></a>
+        <a href='#'><div id='timBacSi' class='element' style="background-image: url('image/function/doctor.jpg');">Tìm bác sĩ</div></a>
+        <a href='#'><div id='datLich' class='element' style="background-image: url('image/function/calendar-512.png')">Đặt lịch</div></a>
+        <a href='#'><div id='chiaSe' class='element' style="background-image: url('image/function/post.png')">Bài viết</div></a>
+        &nbsp;
+    </div>
+
+    <div style='clear: both;'></div>
+
+    <div class='timBacSi'>
+        <div class='vandeKhoa'>
+            <label for="khoa">Bạn gặp vấn đề về: </label>
+            <select id="khoa" name="khoa">
+                <option value="1">Nha khoa</option>
+                <option value="2">Khoa mắt</option>
+                <option value="3">Da liễu</option>
+                <option value="4">Sản phụ khoa</option>
+            </select>
+        </div>
+        
+        <div style="clear: both;"></div>
+        <div class='dsBacSi'>
+            
+            <a href="bacsi.html?id='412414'">
+                <div class='boxContent'>
+                    <div class='topContent'>
+                        <img src="image/anhDaiDien.png" alt="Ảnh đại diện" />
+                        <div class='info'>
+                            <ul>
+                                <li>Bác sĩ: Nguyễn Văn A</li>
+                                <li>Tuổi: 24</li>
+                                <li>Đã thực hiện khám: 30 ca</li>
+                                <li>Đánh giá: 4.5*</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class='bottomContent'>
+                        <ul>
+                            <li title="Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas">Công tác tại: Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas</li>
+                            <li>Chuyên khoa: khoa mắt, tai mũi họng</li>
+                            <li>
+                                <label for="descript">Mô tả:</label>
+                                <textarea class="descript" readonly>asdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdaasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdassdasdasasdjiasdasdasdasasdjiasdasdasdas</textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            
+
+            <a href="bacsi.html?id='412414'">
+                <div class='boxContent'>
+                    <div class='topContent'>
+                        <img src="image/anhDaiDien.png" alt="Ảnh đại diện" />
+                        <div class='info'>
+                            <ul>
+                                <li>Bác sĩ: Trần Văn B</li>
+                                <li>Tuổi: 27</li>
+                                <li>Đã thực hiện khám: 24 ca</li>
+                                <li>Đánh giá: 3.5*</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class='bottomContent'>
+                        <ul>
+                            <li title="Bệnh viện da liễu TPHCM">Công tác tại: Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas</li>
+                            <li>Chuyên khoa: khoa mắt, tai mũi họng</li>
+                            <li>
+                                <label for="descript">Mô tả:</label>
+                                <textarea class="descript" readonly>asdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdaasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdassdasdasasdjiasdasdasdasasdjiasdasdasdas</textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="bacsi.html?id='412414'">
+                <div class='boxContent'>
+                    <div class='topContent'>
+                        <img src="image/anhDaiDien.png" alt="Ảnh đại diện" />
+                        <div class='info'>
+                            <ul>
+                                <li>Bác sĩ: Nguyễn Văn M</li>
+                                <li>Tuổi: 30</li>
+                                <li>Đã thực hiện khám: 30 ca</li>
+                                <li>Đánh giá: 4.5*</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class='bottomContent'>
+                        <ul>
+                            <li title="Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas">Công tác tại: Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas</li>
+                            <li>Chuyên khoa: khoa mắt, tai mũi họng</li>
+                            <li>
+                                <label for="descript">Mô tả:</label>
+                                <textarea class="descript" readonly>asdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdaasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdassdasdasasdjiasdasdasdasasdjiasdasdasdas</textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            
+
+            <a href="bacsi.html?id='412414'">
+                <div class='boxContent'>
+                    <div class='topContent'>
+                        <img src="image/anhDaiDien.png" alt="Ảnh đại diện" />
+                        <div class='info'>
+                            <ul>
+                                <li>Bác sĩ: Trường Văn F</li>
+                                <li>Tuổi: 24</li>
+                                <li>Đã thực hiện khám: 30 ca</li>
+                                <li>Đánh giá: 4.5*</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class='bottomContent'>
+                        <ul>
+                            <li title="Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas">Công tác tại: Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas</li>
+                            <li>Chuyên khoa: khoa mắt, tai mũi họng</li>
+                            <li>
+                                <label for="descript">Mô tả:</label>
+                                <textarea class="descript" readonly>asdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdaasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdassdasdasasdjiasdasdasdasasdjiasdasdasdas</textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            
+
+            <a href="bacsi.html?id='412414'">
+                <div class='boxContent'>
+                    <div class='topContent'>
+                        <img src="image/anhDaiDien.png" alt="Ảnh đại diện" />
+                        <div class='info'>
+                            <ul>
+                                <li>Bác sĩ: Huỳnh Văn E</li>
+                                <li>Tuổi: 24</li>
+                                <li>Đã thực hiện khám: 30 ca</li>
+                                <li>Đánh giá: 4.5*</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class='bottomContent'>
+                        <ul>
+                            <li title="Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas">Công tác tại: Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas</li>
+                            <li>Chuyên khoa: khoa mắt, tai mũi họng</li>
+                            <li>
+                                <label for="descript">Mô tả:</label>
+                                <textarea class="descript" readonly>asdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdaasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdassdasdasasdjiasdasdasdasasdjiasdasdasdas</textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="bacsi.html?id='412414'">
+                <div class='boxContent'>
+                    <div class='topContent'>
+                        <img src="image/anhDaiDien.png" alt="Ảnh đại diện" />
+                        <div class='info'>
+                            <ul>
+                                <li>Bác sĩ: Lý Thị C</li>
+                                <li>Tuổi: 27</li>
+                                <li>Đã thực hiện khám: 24 ca</li>
+                                <li>Đánh giá: 3.5*</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class='bottomContent'>
+                        <ul>
+                            <li title="Bệnh viện da liễu TPHCM">Công tác tại: Bệnh viện nhi đồng 1 TPHCM</li>
+                            <li>Chuyên khoa: khoa mắt, tai mũi họng</li>
+                            <li>
+                                <label for="descript">Mô tả:</label>
+                                <textarea class="descript" readonly>asdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdaasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdassdasdasasdjiasdasdasdasasdjiasdasdasdas</textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="bacsi.html?id='412414'">
+                <div class='boxContent'>
+                    <div class='topContent'>
+                        <img src="image/anhDaiDien.png" alt="Ảnh đại diện" />
+                        <div class='info'>
+                            <ul>
+                                <li>Bác sĩ: Nguyễn Văn A</li>
+                                <li>Tuổi: 24</li>
+                                <li>Đã thực hiện khám: 30 ca</li>
+                                <li>Đánh giá: 4.5*</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class='bottomContent'>
+                        <ul>
+                            <li title="Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas">Công tác tại: Bệnh viện răng hàm mặt TPHCM asdadsadasdsadas</li>
+                            <li>Chuyên khoa: khoa mắt, tai mũi họng</li>
+                            <li>
+                                <label for="descript">Mô tả:</label>
+                                <textarea class="descript" readonly>asdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdaasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdasasdjiasdasdasdassdasdasasdjiasdasdasdasasdjiasdasdasdas</textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="bacsi.html?id='412414'">
+                <div class='boxContent'>
+                    <div class='topContent'>
+                        <img src="image/anhDaiDien.png" alt="Ảnh đại diện" />
+                        <div class='info'>
+                            <ul>
+                                <li>Bác sĩ: Trần Văn B</li>
+                                <li>Tuổi: 27</li>
+                                <li>Đã thực hiện khám: 24 ca</li>
+                                <li>Đánh giá: 3.5*</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class='bottomContent'>
+                        <ul>
+                            <li title="Bệnh viện da liễu TPHCM">Công tác tại: Bệnh viện răng hàm mặt TPHCM</li>
+                            <li>Chuyên khoa: khoa mắt</li>
+                            <li>
+                                <label for="descript">Mô tả:</label>
+                                <textarea class="descript" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor, magna at mattis porta, tellus velit placerat eros, convallis elementum nibh mauris in lorem. Maecenas ipsum purus, placerat non tincidunt non, porttitor a lectus. Aenean elementum felis sed faucibus eleifend. Vestibulum porta turpis nec orci elementum consequat. Sed id pretium nisi, ac laoreet nisi. Curabitur pellentesque ultrices justo, vitae cursus ante tincidunt eu. Aenean tempus non ligula at bibendum. Quisque volutpat quam sit amet suscipit tempor. Integer ex purus, cursus a vestibulum eget, maximus vitae arcu. Donec volutpat quam ac lectus ullamcorper, eget dapibus tortor placerat. Fusce vitae elit dui. Phasellus nec suscipit leo. Morbi at tincidunt neque.
+
+                                    In lobortis mi tincidunt arcu mollis, quis bibendum justo aliquam. In feugiat ipsum ut orci eleifend imperdiet. Fusce dictum vel leo ut consectetur. Pellentesque ullamcorper semper feugiat. Phasellus vel est id enim posuere placerat. Curabitur rutrum neque ut sapien eleifend, at vestibulum mi suscipit. Sed ac enim arcu. Nullam mollis quis quam tincidunt pulvinar. Phasellus egestas, nulla sit amet ornare auctor, libero metus finibus sapien, sit amet laoreet felis risus quis libero. Nullam aliquet suscipit commodo. Nullam dapibus ullamcorper purus, eget porta risus varius nec. Donec condimentum vehicula tempor.</textarea>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

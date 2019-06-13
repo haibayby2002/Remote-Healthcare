@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Import -->
+    <link rel="stylesheet" href="vendors/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="vendors/js/jquery-3.4.0.min.js"></script>
+    <script src="vendors/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="vendors/js/bootstrap.bundle.min.js"></script>
+    <!-- Tab -->
+    <title>Lịch sử khám</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark my-nav" id="my-navigation">
+        <div class="container">
+            <a href="#" class="navbar-brand brand-nav">
+                <img src="resources/img/icon.png" alt="Icon">
+            </a>
+            <ul class="nav navbar-nav menu-nav">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/exHoiKham.html">Khám</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/datLich.html">Đặt lịch</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/exTimBacSi.html">Tìm bác sĩ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Trở thành bác sĩ</a></li>
+            </ul>
+
+            <!-- Cái user này nếu chưa đăng nhập thì hiển thị ra tên đăng nhập, mật khẩu, quên mật khẩu -->
+            <ul class="navbar-nav float-lg-right user-nav">
+                <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"
+                        role="button" aria-expanded="false"><img src="resources/img/icon.png" alt="Avatar"
+                            style="width: 30px;"><span class="user-name">Nguyễn Quý Hải
+                        </span><span class="angle-down s7-angle-down"></span></a>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" href="#"><span
+                                class="icon s7-home"></span>Tài khoản</a><a class="dropdown-item"
+                            href="lichSuKham.html"><span class="icon s7-user"></span>Lịch sử khám</a><a
+                            class="dropdown-item" href="#"><span class="icon s7-cash"></span>Số dư: 500.000 VND</a><a
+                            class="dropdown-item" href="#"><span class="icon s7-tools"></span>Cài đặt</a><a
+                            class="dropdown-item" href="pages-login.php"><span class="icon s7-power"></span>Đăng
+                            xuất</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="clearfix"></div>
+    <section style="margin-top: 35px">
+        <div class="container">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Ngày khám</th>
+                        <th>Bác sĩ</th>
+                        <th>Khoa</th>
+                        <th>Khám về</th>
+                        <th>Phương thức</th>
+                        <th>Chi phí</th>
+                        <th>Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>23/5/2019</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>Mắt</td>
+                        <td>Tật khúc xạ</td>
+                        <td>Khám từ xa</td>
+                        <td>750.000 VND</td>
+                        <td>Mắt bị cận 2.5 độ. Kê 2 chai V.Rohto</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>20/4/2019</td>
+                        <td>Lý Thị B</td>
+                        <td>Răng hàm mặt</td>
+                        <td>Trám răng</td>
+                        <td>Đặt lịch</td>
+                        <td>350.000 VND</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>27/3/2018</td>
+                        <td>Trần Văn C</td>
+                        <td>Khoa sản</td>
+                        <td>Siêu âm</td>
+                        <td>Đặt lịch</td>
+                        <td>300.000 VND</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </section>
+</body>
+
+</html>

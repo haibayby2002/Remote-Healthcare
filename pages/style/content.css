@@ -1,0 +1,55 @@
+.title
+{
+    margin: 5px auto;
+    /* width: 800px; */
+}
+
+.content div
+{
+    width: 1000px;
+}
+
+.box .new
+{
+    width: 400px;
+    padding-right: 20px;
+    border-right: 2px dashed #878786;
+    float: left;
+    text-align: justify;
+    border-bottom: 2px dashed #878786;
+    margin-bottom: 5px;
+    height: 200px;
+}
+
+.new a
+{
+
+}
+
+.after ul
+{
+    list-style-type: none;
+    float: left;
+}
+
+.after ul li
+{
+    margin-left: 10px;
+}
+
+.content
+{
+    border-bottom: 2px solid blueviolet;
+    box-shadow: 2px 2px 2px #248492;
+}
+
+.content .new
+{
+
+    
+}
+
+.content .after
+{
+ 
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nguyễn Văn A</title>
+    <link rel="stylesheet" href="exMenu.css">
+    <link rel="stylesheet" href="bacSi.css">
+    <link rel="stylesheet" href="exTimBacSi.css">
+    <script type="text/javascript">
+        function openForm() 
+        {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() 
+        {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    
+</head>
+<body>
+    <!-- Phần trên bắt đầu giới thiệu -->
+    <div class="header">
+        <div class="icon">
+            <a href="index.html">
+                <img src="image/menu/icon.jpg" alt="Remote Healthcare" />
+            </a>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="slogan">
+
+        </div>
+    </div>
+    <!-- Menu -->
+    <div class='content-wrapper'>
+        <div class='navmenu'>
+            <form action='/search' autocomplete='off' id='search-form' method='get'>
+                <input name='q' placeholder='Tìm kiếm' size='15' type='text'/>
+                <input id='button-submit' type='submit' value='Search'/>
+            </form>
+
+          <span id='menu'><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpi/P//PwM1AQsQU9VEJgYqg8FvICgMGUeel0eTzWiyGU02Qz/ZAAQYAOPcBjEdYroKAAAAAElFTkSuQmCC'  /></span>
+          <nav id='navbar' itemprop='mainEntity' itemscope='itemscope' itemtype='https://schema.org/SiteNavigationElement'>
+          <ul class='navbar'>
+              <li><a href='/' itemprop='url'><span itemprop='name'>Trang chủ</span></a></li>
+              <li><a href='/' itemprop='url'><span itemprop='name'>Chủ đề &amp; Sức khỏe</span></a></li>
+              <li id='sub-menu' style="width: 200px; text-align: center"><span itemprop='name'>Khoa</span>
+                    <ul class="sub-menu">
+                        <li><a href='/' itemprop='url'><span itemprop='name'>Khoa mắt</span></a></li>
+                        <li><a href='/' itemprop='url'><span itemprop='name'>Khoa sản</span></a></li>
+                        <li><a href='/' itemprop='url'><span itemprop='name'>Chấn thương chỉnh hình</span></a></li>
+                    </ul>
+              </li>
+              
+                <li><a href='/' itemprop='url'><span itemprop='name'>Bệnh viện</span></a></li>
+                <li><a href='/' itemprop='url'><span itemprop='name'>Bác sĩ</span></a></li>
+            </ul>
+      </nav>
+      </div>
+      </div>
+    </div>
+
+    <div style='clear: both;'></div>
+
+    <!-- Đăng nhập -->
+    <div id='login' style="float: left;">
+        <form action="process/dangNhap.php" method="POST" title="Đăng nhập">
+            <h2>Đăng nhập</h2>
+            <div class='element'>
+                <label for="username">Tên đăng nhập: </label>
+                <input type="text" name="username" id="username" style="float: right; margin-bottom: 4px;">
+                <div style='clear: both;'></div>
+            </div>
+            <div class='element'>
+                <label for="password">Mật khẩu: </label>
+                <input type="password" name="password" id="password" style="float: right; margin-bottom: 4px;">
+                <div style='clear: both;'></div>
+            </div>
+            <div class='element'>
+                <input type="submit" value="Đăng nhập">
+                <div style='clear: both;'></div>
+            </div>
+            <div class='element'>
+                <span><a href="#">Quên mật khẩu</a></span>
+                <span style="float: right;"><a href="dangky.html" target="_blank">Đăng ký</a></span>
+                <div style='clear: both;'></div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Chủ đề bên phải -->
+    <div class="vertical-menu">
+        <a href="#">Thể dục</a>
+        <a href="#">Ăn uống</a>
+        <a href="#">Sinh hoạt</a>
+        <a href="#">Lối sống</a>
+        <a href="#">Thực phẩm tốt</a>
+        <a href="#">Sống khỏe</a>
+    </div>
+
+    <!-- Các chức năng khám -->
+    <div id='chucnang'>
+        &nbsp;
+        <a href='#'><div id='napTien' class='element' style="background-image: url('image/function/HAND_MONEY-512.png')">Nạp tiền</div></a>
+        <a href='#'><div id='khamTuXa' class='element' style="background-image: url('image/function/icon.jpg');">Khám từ xa</div></a>
+        <a href='#'><div id='timBacSi' class='element' style="background-image: url('image/function/doctor.jpg');">Tìm bác sĩ</div></a>
+        <a href='#'><div id='datLich' class='element' style="background-image: url('image/function/calendar-512.png')">Đặt lịch</div></a>
+        <a href='#'><div id='chiaSe' class='element' style="background-image: url('image/function/post.png')">Bài viết</div></a>
+        &nbsp;
+    </div>
+
+    <div style='clear: both;'></div>
+
+    <div class='main-content'>
+        <form action="" method="GET" class='formHoiDap'> 
+            <div>
+                <label for="khoa">Bạn gặp vấn đề về: </label>
+                <select id="khoa" name="khoa">
+                    <option value="1">Nha khoa</option>
+                    <option value="2">Khoa mắt</option>
+                    <option value="3">Da liễu</option>
+                    <option value="4">Sản phụ khoa</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for='tieu-de'>Ngày và giờ khám:</label>
+                <input type="datetime-local" name="tieu-de" id="tieu-de">
+            </div>
+
+            <div>
+                <label for='benhvien'>Bệnh viện khám (có thể có hoặc không):</label>
+                <input type="text" name="benhvien" id="benhvien">
+            </div>
+
+
+            <div>
+                <label for='noidung'>Lời nhắn:</label>
+                <textarea name="noidung" id="noidung" cols="30" rows="10"></textarea>
+            </div>
+
+            <div style="clear:both;"></div>
+
+            <input type="submit" value="Gửi lịch khám" style="float: right;">
+            
+        </form>
+    </div>
+    
+    
+</body>
+</html>

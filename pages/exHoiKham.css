@@ -1,0 +1,37 @@
+.formHoiDap
+{
+    width: 700px;
+    margin: 5px auto;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.formHoiDap div
+{
+    margin-bottom: 7px;
+}
+
+.formHoiDap div select
+{
+    width: 500px;
+    float: right;
+    height: 20px;
+    color: black;
+}
+
+.formHoiDap div textarea
+{
+    width: 500px;
+    height: 300px;
+    float: right;
+    color: black;
+}
+
+.formHoiDap div input[type='text']
+{
+    width: 500px;
+    float: right;
+    height: 20px;
+    color: black;
+}

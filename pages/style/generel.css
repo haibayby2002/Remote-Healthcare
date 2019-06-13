@@ -1,0 +1,261 @@
+/* General */
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+#main
+{
+    margin: 20px;
+}
+
+
+.clr
+{
+    clear: both;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+
+/* ---------------------------------------------------------------------------------------- */
+/* -----------------------------------    Header       --------------------------------------------- */
+.header
+{
+    width: 1000px;
+    height: 100px;
+    border: 2px solid red;
+    margin: 10px auto;
+    box-shadow: 5px 2px 20px #666666;
+}
+
+.icon a img
+{
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+    float: left;
+    box-shadow: 5px 2px 20px #fd0303;
+}
+
+/* .icon a img:hover
+{
+    box-shadow: 5px 2px 20px #4f7216;
+} */
+
+.line
+{
+    border-left: 6px solid green;
+    height: 100px;
+    float: left;
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+/* -----------------------------------    Menu       --------------------------------------------- */
+.menu
+{
+    /* line-height: 30px; */
+    width: 800px;
+    margin: 10px auto;
+
+}
+
+.menu ul
+{
+    list-style: none;
+    /* background: #d2ecaf; */
+    /* line-height: 30px; */
+}
+
+.menu ul li
+{
+    margin-right: 10px;
+    float: left;
+    background: #d2ecaf;
+    
+}
+
+.menu ul li a
+{
+    text-decoration: none;
+    color: rgb(31, 28, 28);
+    background: #d2ecaf;
+    line-height: 30px;
+    padding: 2px 5px;
+    box-shadow: 3px 5px 3px #444444;
+}
+
+/* .menu ul li:hover
+{
+    background: #cfb1eb;
+} */
+
+.menu ul li a:hover
+{
+    color: purple;
+    background: #cfb1eb;
+    text-decoration: underline;
+    box-shadow: -1.5px 5px 3px rgb(51, 68, 19);
+}
+
+/* Show info khi trỏ vào khoa */
+
+
+
+/* Cạnh menu có 1 ô để tìm kiếm */
+#txt_search
+{
+    line-height: 20px;
+    padding: 1px 5px;
+    width: 200px;
+    float: right;
+    margin-right: 170px;
+    margin-top: 3px;
+    color: #615a5a;
+}
+
+#txt_search:focus
+{
+    box-shadow: 3px 3px 5px #315207;
+}
+
+.search
+{
+    margin: 5px auto;
+}
+/* Nút search */
+.search a img
+{
+    width: 20px;
+    height: 20px;
+    float: right;
+    position: absolute;
+    right: 190px;
+    margin-top: 5px;
+    /* border: 1px solid #666666; */
+}
+/* -------------------------------------------------------------------------------------------------- */
+
+
+/* Vùng hiển thị nội dung
+fieldset
+{
+    width: 1000px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+.left-content
+{
+    width: 45%;
+    border-right: 2px solid #315207;
+    padding: 3px 8px;
+    float: left;
+    margin-right: 10px;
+}
+
+.right-content
+{
+    padding: 3px 5px;
+}
+
+.right-content ul
+{
+    list-style-position: inside;
+    list-style-type: circle;
+    display: block;
+    margin-right: 10px;
+}
+
+.right-content ul li a
+{
+    text-decoration: none;
+    color: #000000;
+    font-size: large;
+    font-weight: bold;
+} */
+
+
+.content
+{
+    /* position: absolute; */
+    width: 1000px;
+    min-height: 500px;
+    border: 1px solid black;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.right
+{
+    right: 5%;
+    border: 1px solid black;
+    width: 200px;
+    height: 70%;
+    position: fixed;
+    z-index: 3;
+}
+
+.footer
+{
+
+}
+/* ------------------------------------------------------------------------- */
+
+/* Đăng nhập */
+/* .dangNhap
+{
+    margin: 17px 150px;
+    border: 1px dashed purple;
+    width: 250px;
+    text-align: center;
+    padding: 4px;
+}
+
+.dangNhap form input
+{
+    width: 200px;
+    margin: 5px auto;
+    background-color: rgb(140, 172, 224);
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.dangNhap form input[type='submit']:hover
+{
+    pointer-events: stroke;
+    box-shadow: 2px 2px 2px #444444;
+}
+
+.dangKy
+{
+    margin: 3px 15px;
+    float: left;
+    color: blue;
+}
+
+.quenMatKhau
+{
+    margin: 3px 15px;
+    float: right;
+    color: blue;
+}
+
+.drop_khoa
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} */
+
+

@@ -1,0 +1,86 @@
+/* General */
+.dsBacSi
+{
+    border: 1px solid black;
+    text-align: justify;
+}
+
+.dsBacSi .boxContent
+{
+    width: 430px;
+    margin: 5px;
+    overflow-x: scroll;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.dsBacSi a
+{
+    color: rgb(37, 23, 23);
+}
+
+.dsBacSi .boxContent:hover
+{
+    box-shadow: 2px 2px 3px red;
+}
+
+/* <--- Finish general */
+
+/* Top */
+.dsBacSi .boxContent .topContent
+{
+    border: 1px solid black;
+    background-image: url('image/background/nen_3.jpg');
+    background-repeat: repeat;
+}
+
+.dsBacSi .boxContent .descript
+{
+    resize: none;
+    overflow-y: scroll;
+    
+}
+
+.dsBacSi .boxContent .topContent img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+/* <-- Finish top */
+
+/* Bottom */
+.dsBacSi .bottomContent
+{
+    border: 1px solid black;
+    background-image: url('image/background/abstract-green-tile-pattern.jpg');
+    background-repeat: repeat;
+}
+
+.dsBacSi .bottomContent li
+{
+    margin-left: -15px;
+}
+
+.dsBacSi ul li
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.dsBacSi .bottomContent li .descript
+{
+    width: 250px;
+    height: 80px;
+    overflow-y: scroll;
+    vertical-align: middle;
+}
+
+/* <-- Finish bottom */
+
+
+
